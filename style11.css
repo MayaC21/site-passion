@@ -1,0 +1,50 @@
+body{
+    padding: 20px;
+}
+
+.box
+{
+    background: #333;
+    color: rgb(228, 144, 144);
+    padding: 20px; 
+} 
+body
+{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 20px; 
+    gap: 1em;
+} 
+
+.menu
+{
+    grid-column: span 5 ;    /* permet de définir la taille et l'emplacement d'un élément sur la grille en indiquant l'emplacement du début, de la fin et/ou sa taille.*/
+}  
+
+.breadcrumb
+{
+    grid-column: span 6 ;    /* permet de définir la taille et l'emplacement d'un élément sur la grille en indiquant l'emplacement du début, de la fin et/ou sa taille.*/
+}  
+.main{
+    grid-column: span 4;  
+    grid-row: span 2;
+}
+.main
+{
+    grid-column: 1 / span 4;  /* une colonne positionnée en la 1 colo et predra 4 colonnes d espace */
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 20px;  
+} 
+
+.sidebar{
+    grid-column: span 2;  
+    grid-row: span 2;
+}
+footer
+{
+    grid-column: span 6  ;    /* permet de définir la taille et l'emplacement d'un élément sur la grille en indiquant l'emplacement du début, de la fin et/ou sa taille.*/
+}  

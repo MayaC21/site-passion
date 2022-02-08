@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title> formulaire </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"> </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+    <script  type="text/javascript" language="javascript">
+        function checkSubmit (thisForm){
+            if (thisForm.user_name.value==''){
+                alert('Veuillez saisir votre nom.');
+                return false;
+            }
+            if (thisForm.user_mail.value==''){
+                alert('Veuillez saisir votre adresse mail.');
+                return false;
+            }
+            if (thisForm.user_message.value==''){
+                alert('Veuillez saisir votre message.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <section class="for">
+        <form action="/ma-page-de-traitement" method="post" classe="form-li" onsubmit="return checkSubmit(this)">
+            <div>
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="user_name">
+            </div>
+            <div>
+                <label for="mail">e-mail:</label>
+                <input type="email" id="mail" name="user_mail">
+            </div>
+            <div>
+                <label for="msg">Message :</label>
+                <textarea id="msg" name="user_message"></textarea>
+            </div>
+            <div class="button">
+                <button type="submit">Envoyer le message</button>
+            </div>
+        </form>
+    </section>
+    
+
+</body>
+</html>
+
+
+
